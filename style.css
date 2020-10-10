@@ -1,6 +1,7 @@
 /* CSS files add styling rules to your content */
 h1 {
-  color: pink;
+  color: #e65480;
+  order: -2;
 }
 
 html, body {
@@ -9,13 +10,27 @@ html, body {
 }
 
 body {
+  background: #1a1a1d;
   margin: 0;
   display: flex;
   flex-direction: column;
+
 
   /* This centers our sketch horizontally. */
   justify-content: center;
 
   /* This centers our sketch vertically. */
   align-items: center;
+}
+
+button {
+  background: #950740;
+  color: white;
+  order: -1;
+  width: 90%;
+  height: 50px;
+}
+
+button:hover {
+  background: #c3073f;
 }
