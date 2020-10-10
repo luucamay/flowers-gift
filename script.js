@@ -15,42 +15,43 @@ DONE:
 * on click create a random flower
 */
 
-function randomIntFromInterval(min, max) { // min and max included 
+function randomIntFromInterval(min, max) {
+  // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 let d, n, k, red, green, blue, cnvWeight, cnvHeight, flowerSize;
 
 function setup() {
   customCanvasSetup();
-  
+
   let button = createButton("Presiona aquí para que recibas tu flor de regalo");
-  
+
   let cnv = createCanvas(cnvWidth, cnvHeight);
   button.mousePressed(resetSketch);
-  }
+}
 
 function windowResized() {
   customCanvasSetup();
   resizeCanvas(cnvWidth, cnvHeight);
 }
 
-function customCanvasSetup(){
-  cnvWidth = windowWidth*0.9;
-  cnvHeight = windowHeight*0.8;
-  flowerSize = Math.min(cnvWidth, cnvHeight)/2.5;
+function customCanvasSetup() {
+  cnvWidth = windowWidth * 0.9;
+  cnvHeight = windowHeight * 0.8;
+  flowerSize = Math.min(cnvWidth, cnvHeight) / 2.5;
 }
 
-function resetSketch(){
-  d = randomIntFromInterval(1, 9);
-  n = randomIntFromInterval(1, 7);
-  k = n / d; 
+function resetSketch() {
+  d = 1;
+  n = randomIntFromInterval(2, 7);
+  k = n / d;
   red = randomIntFromInterval(1, 255);
   green = randomIntFromInterval(1, 255);
-  blue = randomIntFromInterval(1, 255);  
+  blue = randomIntFromInterval(1, 255);
 }
 
 function draw() {
-  background(26,26,29);
+  background(26, 26, 29);
   translate(width / 2, height / 2);
   beginShape();
   noFill();
