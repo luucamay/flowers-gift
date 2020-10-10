@@ -1,11 +1,11 @@
 /* CSS files add styling rules to your content */
 h1 {
-  color: #e65480;
   order: -2;
 }
 
 html, body {
   font-family: helvetica, arial, sans-serif;
+  color: #e65480;
   height: 100%;
 }
 
